@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App - TeamControl</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Intro / Splash Screen Animation -->
+    <div id="splash-screen">
+        <div class="intro-logo">
+            <h1>TEAMCONTROL</h1>
+            <p>Recipe App Loading...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h2>My Recipe App</h2>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Tab 1: Ads (ကြော်ငြာဖိုင်) -->
+        <section id="ads-tab" class="tab-content">
+            <h3 style="margin-bottom: 15px; color: #60a5fa;">ကြော်ငြာများ (Ads)</h3>
+            
+            <iframe src="ads.html" style="width:100%; border:none; height:400px;"></iframe>
+        </section>
+
+        <!-- Tab 2: Projects (Recipe ဖိုင်များ) -->
+        <section id="projects-tab" class="tab-content active">
+            <h3 style="margin-bottom: 15px; color: #60a5fa;">ဟင်းချက်နည်းများ (Projects)</h3>
+            
+            <div class="recipe-card">
+                <h3>ကြက်သားဆီပြန်ချက်</h3>
+                <p>ပါဝင်ပစ္စည်းများ - ကြက်သား၊ ကြက်သွန်နီ၊ ကြက်သွန်ဖြူ၊ ဂျင်း၊ ငရုတ်သီးစိမ်း...</p>
+                <button class="btn-save" onclick="saveRecipe('ကြက်သားဆီပြန်ချက်')">Save ဖိုင်သို့သိမ်းမည်</button>
+            </div>
+
+            <div class="recipe-card">
+                <h3>တုန်းယမ်တုံဟင်းချို</h3>
+                <p>ပါဝင်ပစ္စည်းများ - ပုစွန်၊ စိမ်းစားငါးပိ၊ စပါးလင်၊ ရှဲလော့၊ သံပရာသီး...</p>
+                <button class="btn-save" onclick="saveRecipe('တုန်းယမ်တုံဟင်းချို')">Save ဖိုင်သို့သိမ်းမည်</button>
+            </div>
+        </section>
+
+        <!-- Tab 3: Save (သိမ်းဆည်းထားသည်များ) -->
+        <section id="save-tab" class="tab-content">
+            <h3 style="margin-bottom: 15px; color: #60a5fa;">သိမ်းဆည်းထားသော ဖိုင်များ (Saved)</h3>
+            
+            <div class="recipe-card" style="border-color: #2563eb;">
+                <h3>သိမ်းဆည်းထားသော ဟင်းချက်နည်း (Sample)</h3>
+                <p>သင် Save လုပ်ထားသော ဟင်းချက်နည်းများကို ဒီနေရာတွင် ပြန်လည်ကြည့်ရှုနိုင်ပါသည်။</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <button class="nav-item" data-tab="ads-tab">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1 14H5V8h14v10z"/></svg>
+            <span>ကြော်ငြာ (Ads)</span>
+        </button>
+        <button class="nav-item active" data-tab="projects-tab">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            <span>Projects</span>
+        </button>
+        <button class="nav-item" data-tab="save-tab">
+            <svg viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+            <span>Save ဖိုင်</span>
+        </button>
+    </nav>
+
+    <!-- Function Script ချိတ်ဆက်ခြင်း -->
+    <script src="app.js"></script>
+</body>
+</html>
